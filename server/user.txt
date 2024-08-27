@@ -1,0 +1,41 @@
+
+
+{
+    "_id": "66aa193cf717162cf9d0c0fc",
+    "name": "abdelhadi",
+    "email": "logxpf@gmail.com",
+    "isAdmin": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFhMTkzY2Y3MTcxNjJjZjlkMGMwZmMiLCJuYW1lIjoiYWJkZWxoYWRpIiwiZW1haWwiOiJsb2d4cGZAZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzIyNDIzNjEyLCJleHAiOjE3MjUwMTU2MTJ9.oZ25kX45eKekjCij1BjpQ6pQwLdNVqS6oToR5H1BusU"
+}
+
+{
+    "_id": "66aa23b7d99c8514bbd03da2",
+    "name": "admain",
+    "email": "admain@gmail.com",
+    "isAdmin": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFhMjNiN2Q5OWM4NTE0YmJkMDNkYTIiLCJuYW1lIjoiYWRtYWluIiwiZW1haWwiOiJhZG1haW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzIyNDI2Mjk1LCJleHAiOjE3MjUwMTgyOTV9.4DeyNsk3F20lv3jT8mD5AY-PFUS2gb1aQbRZrc0hJ9Y"
+}
+
+{
+    "_id": "66aa19c3f717162cf9d0c100",
+    "name": "acos",
+    "email": "acos@gmail.com",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFhMTljM2Y3MTcxNjJjZjlkMGMxMDAiLCJuYW1lIjoiYWNvcyIsImVtYWlsIjoiYWNvc0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzIyNDIzNzQ4LCJleHAiOjE3MjUwMTU3NDh9.u56SyHP2zJzfZHclxBVaI1-CQyyYvtzS1f0moysSZXQ"
+}
+
+{
+    "_id": "66aa19e6f717162cf9d0c102",
+    "name": "acos.ix",
+    "email": "acos.ix@gmail.com",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFhMTllNmY3MTcxNjJjZjlkMGMxMDIiLCJuYW1lIjoiYWNvcy5peCIsImVtYWlsIjoiYWNvcy5peEBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzIyNDIzNzgyLCJleHAiOjE3MjUwMTU3ODJ9.oQUodM2DTVDS_ulbPiTZpV7MeE28NMsxyL08k88Rb78"
+}
+
+{
+    "_id": "66aa1a04f717162cf9d0c104",
+    "name": "acos.ag",
+    "email": "acos.ag@gmail.com",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmFhMWEwNGY3MTcxNjJjZjlkMGMxMDQiLCJuYW1lIjoiYWNvcy5hZyIsImVtYWlsIjoiYWNvcy5hZ0BnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzIyNDIzODEyLCJleHAiOjE3MjUwMTU4MTJ9.h4eMa1lmb5zGKVazXw3H0yrRQDpQWHMikDvSQ82W9z4"
+}

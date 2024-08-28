@@ -29,7 +29,10 @@ function SingUp() {
       payload: data,
     });
     localStorage.setItem("userInfo", JSON.stringify(datas));
-    navigate("/");
+      setTimeout(() => {
+      navigate("/");
+      window.location.reload(); 
+    }, 500);
   };
 
   return (

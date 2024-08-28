@@ -219,10 +219,10 @@ const Product_details_page = () => {
           </div>
           <div className="warranty_box">
             <h4>
-              {product.warranty}: <a>Learn more</a>
+              {product.warranty}
             </h4>
             <h4>
-              Easy returns for products: <a>Learn more</a>
+              Easy returns for products
             </h4>
           </div>
         </Col>

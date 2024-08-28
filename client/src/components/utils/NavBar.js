@@ -50,14 +50,18 @@ function NavBar() {
               )}
             </Link>
 
-            <Link to="/Favorite">
-            Favorite   <FavoriteBorderIcon sx={{ fontSize: 24 }} />
-              {likeData.length > 0 && (
-                <Badge pill bg="danger">
-                  +
-                </Badge>
-              )}
-            </Link>
+            {userInfo ? (
+              <Link to="/Favorite" className="Nav nava NavDropdown">
+                Favorite <FavoriteBorderIcon sx={{ fontSize: 24 }} />
+                {likeData.length > 0 && (
+                  <Badge pill bg="danger">
+                    +
+                  </Badge>
+                )}
+              </Link>
+            ) : (
+              <span> </span>
+            )}
 
             {userInfo ? (
               <Link to="/profile" className="Nav nava NavDropdown">

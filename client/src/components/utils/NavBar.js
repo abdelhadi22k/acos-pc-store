@@ -11,10 +11,23 @@ import { useSelector } from "react-redux";
 import { Badge } from "react-bootstrap";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 
+import { Button } from "react-bootstrap";
+import { userSignout } from "../../redux/user/UserAction";
+
+
 function NavBar() {
   const likeData = useSelector((state) => state.like.like.likeItems);
   const cartData = useSelector((state) => state.cart.cart.cartItems);
   const userInfo = useSelector((state) => state.user.userInfo);
+
+
+   const signoutHandler = () => {
+    userSignout({ type: "USER_SIGNOUT" });
+    localStorage.removeItem("userInfo");
+    localStorage.removeItem("shippingAddress");
+    localStorage.removeItem("paymentMethod");
+    window.location.href = "/signin";
+  };
 
   return (
     <Container className="Nva_Container">
@@ -31,6 +44,15 @@ function NavBar() {
         />
 
         <Navbar.Collapse id="responsive-navbar-nav">
+
+               <Button variant="danger" onClick={signoutHandler}>
+        <Link className='signin' to="/signin">
+          <i class="fa-solid fa-arrow-right-from-bracket "></i> signout
+        </Link>
+      </Button>
+
+
+            
           <Nav className="Nav_Link_Icon">
             <Link to="/search">
               Search...

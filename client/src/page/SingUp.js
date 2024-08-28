@@ -23,7 +23,7 @@ function SingUp() {
       body: JSON.stringify({ name, email, password }),
     });
     const datas = await data.json();
-    console.log(datas);
+ 
     userSignin({
       type: "USER_SIGNIN",
       payload: data,

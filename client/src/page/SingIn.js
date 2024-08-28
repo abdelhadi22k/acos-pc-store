@@ -28,7 +28,10 @@ function SingIn() {
       payload: data,
     });
     localStorage.setItem("userInfo", JSON.stringify(data));
-    navigate("/");
+      setTimeout(() => {
+      navigate("/");
+      window.location.reload(); 
+    }, 500);
   };
 
   return (

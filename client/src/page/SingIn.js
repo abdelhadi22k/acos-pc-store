@@ -5,15 +5,15 @@ import { userSignin } from "../redux/user/UserAction";
 import { Helmet } from "react-helmet-async";
 import domain from "../utils/config";
 
-function SignIn() {
+function SingIn() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handelsubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch(`${domain}/api/users/signin`, {
+    const data = await fetch(`${domain}/api/users/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,8 +21,8 @@ function SignIn() {
       body: JSON.stringify({ email, password }),
     });
 
-    const data = await response.json();
-    console.log(data);
+    const datas = await data.json();
+    console.log(datas);
     userSignin({
       type: "USER_SIGNIN",
       payload: data,
@@ -34,45 +34,52 @@ function SignIn() {
   return (
     <Container className="signIn-container">
       <Helmet>
-        <title>Sign In</title>
+        <title> Sign In</title>
       </Helmet>
+
       <div className="form-wrapper">
         <h2 className="form-title">Sign In</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              required
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              required
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="form-actions">
-            <button type="submit" className="submit-button">
-              Sign In
-            </button>
-            <Link className="sign-up-link" to="/SingUp">
-              Don't have an account? Sign Up
-            </Link>
-          </div>
-        </form>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="email"
+            value={email}
+            required={true}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="password"
+            value={password}
+            required={true}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </div>
+
+        <div className="form-actions">
+          <button
+            type="submit"
+            className="submit-button"
+            onClick={handelsubmit}
+          >
+            Sign In
+          </button>
+
+          <Link className="sign-up-link" to={"/singup"}>
+            Don't have an account? Sign Up
+          </Link>
+        </div>
       </div>
     </Container>
   );
 }
 
-export default SignIn;
+export default SingIn;

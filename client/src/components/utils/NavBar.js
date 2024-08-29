@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 import { Badge } from "react-bootstrap";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 
-
 import { userSignout } from "../../redux/user/UserAction";
 
 function NavBar() {
@@ -19,15 +18,13 @@ function NavBar() {
   const cartData = useSelector((state) => state.cart.cart.cartItems);
   const userInfo = useSelector((state) => state.user.userInfo);
 
-
-    const signoutHandler = () => {
+  const signoutHandler = () => {
     userSignout({ type: "USER_SIGNOUT" });
     localStorage.removeItem("userInfo");
     localStorage.removeItem("shippingAddress");
     localStorage.removeItem("paymentMethod");
     window.location.href = "/singup";
   };
-
 
   return (
     <Container className="Nva_Container">
@@ -44,8 +41,6 @@ function NavBar() {
         />
 
         <Navbar.Collapse id="responsive-navbar-nav">
-
-            
           <Nav className="Nav_Link_Icon">
             <Link to="/search">
               Search...
@@ -57,7 +52,7 @@ function NavBar() {
             </Link>
 
             <Link to="/cart">
-           Cart   <LocalMallOutlinedIcon sx={{ fontSize: 24 }} />
+              Cart <LocalMallOutlinedIcon sx={{ fontSize: 24 }} />
               {cartData.length > 0 && (
                 <Badge pill bg="danger">
                   {cartData.reduce((a, c) => a + c.quantity, 0)}
@@ -80,7 +75,7 @@ function NavBar() {
 
             {userInfo ? (
               <Link to="/profile" className="Nav nava NavDropdown">
-              Profile   <Person2OutlinedIcon sx={{ fontSize: 24 }} />
+                Profile <Person2OutlinedIcon sx={{ fontSize: 24 }} />
               </Link>
             ) : (
               <Link className="" to="/SingUp">
@@ -88,7 +83,7 @@ function NavBar() {
               </Link>
             )}
 
-               {userInfo ? (
+            {userInfo ? (
               <span onClick={signoutHandler}>
                 <Link  className="Nav nava NavDropdown">
                 sign out <i class="fa-solid fa-arrow-right-from-bracket "></i> 
@@ -97,7 +92,6 @@ function NavBar() {
             ) : (
               <span> </span>
             )}
-              
           </Nav>
         </Navbar.Collapse>
       </Navbar>

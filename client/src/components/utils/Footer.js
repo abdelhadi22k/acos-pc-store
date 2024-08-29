@@ -242,7 +242,7 @@ const Footer = () => {
                <li onClick={signoutHandler}>
              
               <Link  to="/singup">
-                <i class="fa-solid fa-arrow-right-from-bracket "></i> signout
+                <i class="fa-solid fa-arrow-right-from-bracket "></i> sign out
               </Link>
           
               </li>

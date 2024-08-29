@@ -12,7 +12,9 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
+import Typography from "@mui/material/Typography
+  
+import { userSignout } from "../../redux/user/UserAction";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -59,6 +61,15 @@ const Footer = () => {
   const handleClose3 = () => {
     setOpen3(false);
   };
+
+   const signoutHandler = () => {
+    userSignout({ type: "USER_SIGNOUT" });
+    localStorage.removeItem("userInfo");
+    localStorage.removeItem("shippingAddress");
+    localStorage.removeItem("paymentMethod");
+    window.location.href = "/signin";
+  };
+
 
   return (
     <footer>
@@ -227,6 +238,15 @@ const Footer = () => {
                 {" "}
                 <Link to="/cart"> Cart</Link>{" "}
               </li>
+
+               <li onClick={signoutHandler}>
+             
+              <Link  to="/singup">
+                <i class="fa-solid fa-arrow-right-from-bracket "></i> signout
+              </Link>
+          
+              </li>
+                          
             </ul>
           </Col>
 

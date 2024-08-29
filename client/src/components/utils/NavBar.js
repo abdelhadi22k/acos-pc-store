@@ -12,7 +12,7 @@ import { Badge } from "react-bootstrap";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 
 
-
+import { userSignout } from "../../redux/user/UserAction";
 
 function NavBar() {
   const likeData = useSelector((state) => state.like.like.likeItems);
@@ -20,7 +20,14 @@ function NavBar() {
   const userInfo = useSelector((state) => state.user.userInfo);
 
 
-   
+    const signoutHandler = () => {
+    userSignout({ type: "USER_SIGNOUT" });
+    localStorage.removeItem("userInfo");
+    localStorage.removeItem("shippingAddress");
+    localStorage.removeItem("paymentMethod");
+    window.location.href = "/singup";
+  };
+
 
   return (
     <Container className="Nva_Container">
@@ -80,6 +87,17 @@ function NavBar() {
                 SingUp
               </Link>
             )}
+
+               {userInfo ? (
+              <span onClick={signoutHandler}>
+                <Link  className="Nav nava NavDropdown">
+                sign out <i class="fa-solid fa-arrow-right-from-bracket "></i> 
+                </Link>
+              </span>
+            ) : (
+              <span> </span>
+            )}
+              
           </Nav>
         </Navbar.Collapse>
       </Navbar>
